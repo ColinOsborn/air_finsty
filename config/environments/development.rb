@@ -70,12 +70,8 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :user_name => 'apikey',
-    :password => '', # This is the secret sendgrid API key which was issued during API key creation
-    :domain => 'Colin.Osborn@gmail.com',
-    :address => 'smtp.sendgrid.net',
+    :address => 'smtp.mailgun.org',
     :port => 587,
-    :authentication => :plain,
-    :enable_starttls_auto => true
-  }
+   # rest of the details are in MG
+}
 end

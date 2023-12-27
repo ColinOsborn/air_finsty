@@ -19,9 +19,6 @@
       <% end %>
 
       <div class="form-group">
-        <% if @minimum_password_length %>
-        <em>(<%= @minimum_password_length %> characters minimum)</em>
-        <% end %><br />
         <%= f.password_field :password, placeholder: "New Password (Leave blank if you don't want to change it)", class: "form-control", autocomplete: "off" %>
       </div>
 
@@ -34,7 +31,7 @@
       </div>
 
       <div class="actions">
-        <%= f.submit "Update", class: "btn btn-primary" %>
+        <%= f.submit "Update", class: "btn btn-primary btn-normal btn-block" %>
       </div>
     <% end %>
   </div>

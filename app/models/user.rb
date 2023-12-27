@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
   validates :fullname, presence: true, length: { maximum: 50 }
 
+  has_many :rentals
+
   def self.from_omniauth(auth)
     user = User.find_by(email: auth.info.email).first
     # ensure this will behave how we want vs where(email: auth.info.email)

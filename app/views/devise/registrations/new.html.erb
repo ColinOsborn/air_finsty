@@ -15,15 +15,14 @@
         </div>
 
         <div class="form-group">
-          <% if @minimum_password_length %>
-          <em>(<%= @minimum_password_length %> characters minimum)</em>
-          <% end %><br />
-          <%= f.password_field :password, placeholder: "Password", class: "form-control", autocomplete: "new-password" %>
+          <%= f.password_field :password, placeholder: "Password, 6 characters min", class: "form-control", autocomplete: "new-password" %>
         </div>
 
         <div class="actions">
-          <%= f.submit "Sign up", class: "btn btn-primary"%>
+          <%= f.submit "Sign up", class: "btn btn-primary btn-normal btn-block"%>
         </div>
       <% end %>
+      <hr/>
+      <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path, class: "btn btn-facebook btn-block" %>
   </div>
 </div>

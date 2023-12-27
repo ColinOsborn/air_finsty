@@ -1,13 +1,12 @@
 Rails.application.routes.draw do
+  root 'pages#home'
+
   devise_for :users, controllers: { registrations: 'registrations' }
 
   # devise_for :users,
-  #   omniauth feature
   #   path: '',
   #   path_names: { sign_in: 'login', sign_out: 'logout', edit: 'profile', sign_up: 'registration'},
   #   controllers: { registrations: 'registrations', omniauth_callbacks: 'omniauth_callbacks' }
-
-  root 'pages#home'
 
   devise_scope :user do
     get 'login', to: 'devise/sessions#new'

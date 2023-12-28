@@ -40,6 +40,7 @@ group :development, :test do
   gem 'launchy'
   gem 'byebug'
   gem 'shoulda-matchers', '~> 5.0'
+  gem 'simplecov', require: false, group: :test
   gem 'rails-controller-testing'
 end
 

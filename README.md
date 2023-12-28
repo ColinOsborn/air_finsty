@@ -35,6 +35,8 @@ application up and running.
 
 * How to run the test suite: `rspec` or to run a file independently `rspec app/models/rentals_spec.rb`
 
+* To view test coverage, run test suite, `rspec` and then `run open coverage/index.html`
+
 * Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+* Deployment instructions - coming soon!

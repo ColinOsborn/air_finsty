@@ -1,6 +1,8 @@
 class RentalsController < ApplicationController
   before_action :find_rental, except: %i[index new create]
   before_action :authenticate_user!, except: [:show]
+  before_action :is_authorized, only: %i[listing pricing description photo_upload amenities location update]
+
   def index
     # @rentals = current_user.rooms
     @rentals = Rentals.all
@@ -33,6 +35,7 @@ class RentalsController < ApplicationController
   end
 
   def photo_upload
+    @photos = @rental.images
   end
 
   def amenities
@@ -54,6 +57,10 @@ class RentalsController < ApplicationController
 
   def find_rental
     @rental = Rental.find(params[:id])
+  end
+
+  def is_authorized
+    redirect_to root_path, alert: "You don't have permission" unless current_user.id == @rental.user_id
   end
 
   def rental_params

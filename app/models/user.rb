@@ -4,7 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :omniauthable,
          :recoverable, :rememberable, :validatable, :confirmable
 
+  # Validations
   validates :fullname, presence: true, length: { maximum: 50 }
+  # Associations
+  has_many :rentals
 
   def self.from_omniauth(auth)
     user = User.find_by(email: auth.info.email).first

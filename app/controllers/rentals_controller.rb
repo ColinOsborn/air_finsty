@@ -15,7 +15,8 @@ class RentalsController < ApplicationController
     if @rental.save!
       redirect_to listing_rental_path(@rental), notice: "Saved..."
     else
-      redner :new, notice: "Something went wrong..."
+      flash[:alert] = "Something went wrong..."
+      render :new
     end
   end
 
@@ -44,7 +45,7 @@ class RentalsController < ApplicationController
     if @rental.update!(rental_params)
       flash[:notice] = "Saved"
     else
-      flash[:notice] = "Something went wrong"
+      flash[:alert] = "Something went wrong"
     end
     redirect_back(fallback_location: request.referer)
   end

@@ -1,5 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Rental, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  context 'validations' do
+    it { is_expected.to validate_presence_of(:home_type) }
+    it { is_expected.to validate_presence_of(:rental_type) }
+    it { is_expected.to validate_presence_of(:accommodate) }
+    it { is_expected.to validate_presence_of(:bedroom) }
+    it { is_expected.to validate_presence_of(:bathroom) }
+  end
 end

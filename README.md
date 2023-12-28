@@ -1,7 +1,9 @@
 # README
 
 ## AirFinsty
-This Application is a vacational rental booking website that allows for repeat or new clients to book directly with Finsty Properties. It showcases his properties in Colorado and Arizona and mocks the same functionality you'd see on Airbnb.
+This Application is a vacational rental booking website that allows for repeat or new guests to book directly with Finsty Properties. It showcases his properties in Colorado and Arizona and mocks the same functionality you'd see on Airbnb.
+
+Here's some screenshots of the Rental listing creation, and allowing for quick ease of adding/removing amenities or othe features of the Rental to attract the most guests.
 
 ![amenities](app/assets/images/amenities_img.png)
 ![description](app/assets/images/description_img.png)
